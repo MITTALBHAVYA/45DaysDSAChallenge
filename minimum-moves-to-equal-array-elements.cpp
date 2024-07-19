@@ -1,5 +1,5 @@
 /*
-
+https://leetcode.com/problems/minimum-moves-to-equal-array-elements/solutions/5501622/greedy-approach-maths-set-theory-out-of-the-box-logical-analysis/
 */
 class Solution {
 public:
