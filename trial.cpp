@@ -1,54 +1,27 @@
-class Solution
-{
+class Solution {
 public:
-    int solve(int low, int high, vector<int> &nums, int target)
-    {
-        if (low <= high)
-        {
-            int mid = (low + high) / 2;
-            if (nums[mid] == target)
-            {
-                return mid;
-            }
-            if (nums[high] == target)
-            {
-                return high;
-            }
-            if (nums[low] == target)
-            {
-                return low;
-            }
-            if (nums[low] > target && nums[high] < target)
-            {
-                return -1;
-            }
-            if (nums[mid] < target)
-            {
-                if (nums[low] < target && nums[high] < target)
-                {
-                    return max(solve(low + 1, mid - 1, nums, target), solve(mid + 1, high - 1, nums, target));
-                }
-                low = mid + 1;
-                high--;
-                return solve(low, high, nums, target);
-            }
-            if (nums[mid] > target)
-            {
-                if (nums[low] > target && nums[high] > target)
-                {
-                    return max(solve(low + 1, mid - 1, nums, target), solve(mid + 1, high - 1, nums, target));
-                }
-                low++;
-                high = mid - 1;
-                return solve(low, mid, nums, target);
-            }
+    long long call=0;
+    bool solve(vector<bool>&path,long long lastjump,long long index){
+        cout<<++call<<endl;
+        if(index==path.size()-1){
+            return true;
         }
-        return -1;
+        if(index>=path.size() || index<0 ||path[index]!=true || lastjump<=0){
+            return false;
+        }
+        bool a=false,b=false,c=false;
+        a = solve(path,lastjump-1,index+(lastjump-1));
+        b = solve(path,lastjump,index+lastjump);
+        c = solve(path,lastjump+1,index+(lastjump+1));
+        return a||b||c;
     }
-    int search(vector<int> &nums, int target)
-    {
-        int low = 0, high = nums.size() - 1;
-        int ans = solve(low, high, nums, target);
-        return ans;
+    bool canCross(vector<int>& stones) {
+        long long n = stones.size();
+        long long last = stones[n-1];
+        vector<bool>path(last+1,false);
+        for(auto stone : stones){
+            path[stone]=true;
+        }
+        return solve(path,1,1);
     }
 };
