@@ -1,0 +1,35 @@
+
+**Day 23-24 Accomplishments**
+
+Here's what I accomplished:
+
+### **Web Development:**
+1. **JobHack Platform as a Full-Stack Project:**
+   - Integrated both frontend and backend to make the JobHack platform a complete full-stack application.
+   - Implemented a job newsletter feature that automatically sends personalized job alerts to users based on their niche preferences. This involved setting up a cron job and creating a robust email notification service.
+
+2. **Backend Enhancements:**
+   -Use class based model in Node.js for backend development
+   - Developed the `SendEmail` service to automate and manage email notifications.
+   - Refined the job schema to include newsletter tracking, ensuring users receive timely job alerts without duplicates.
+
+3. **Frontend Updates:**
+   - Aligned UI components with a cohesive olive-brown theme for a consistent and modern look.
+   - Improved the user experience across multiple pages, including the job posting and application components.
+
+JobHack GitHub Repository : https://github.com/MITTALBHAVYA/jobHack  
+**Live Link** https://jobhack108.netlify.app/
+
+### **DSA:**
+1. **CodeChef Contest Upsolve:**
+   - Focused on upsolving problems from recent contests to improve problem-solving skills and enhance my algorithmic knowledge.
+
+### **General:**
+1. **Internship Applications:**
+   - Continued applying for internships, utilizing JobHack to streamline the process and keep track of my applications.
+
+I'm keeping a record of my journey and solutions on GitHub.
+
+*(Kindly raise issues in the web application to help make it better and aligned with modern needs.)*
+
+#WebDevelopment #DSA #LeetCode #ProblemSolving #CodingChallenge #InternshipPreparation #PlacementPreparation #TechJoke #MERN stack

@@ -1,0 +1,33 @@
+**Day 25-26 Accomplishments**
+
+Here's what I accomplished:
+
+### **Development:**
+1. **Explored Various Python Libraries:**
+   - Discovered several interesting Python libraries: PaddleOCR, PyTesseract, PyMuPDF, PDFPlumber, Fitz, PIL, PDF2Image, EasyOCR.
+
+2. **LLM / Gemini Integration:**
+   - Stepped into the initial stage of the LLM project and integration.
+   - Learned the basic concept of Retrieval-Augmented Generation (RAG).
+
+3. **Frontend Updates:**
+   - Explored advanced usage of Streamlit libraries for fast front-end development, especially when the main focus is backend.
+
+   GitHub Repository for Invoice Extraction Application ->(https://github.com/MITTALBHAVYA/swipeinterntask)
+
+### **DSA:**
+1. Serialize and Deserialize Binary Tree -> (https://leetcode.com/problems/serialize-and-deserialize-binary-tree/submissions/1351162911/)
+2. Vertical Order Traversal of a Binary Tree -> (https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/submissions/1351227841/)
+3. Binary Tree Cameras -> (https://leetcode.com/problems/binary-tree-cameras/submissions/1351294648/)
+
+### **General:**
+1. **Internship Applications:**
+   - Continued applying for internships and completing their tasks.
+
+2. **Flipkart Grid 6.0:**
+   - Completed the Level 1 Test today, hoping to advance to the next level.
+
+I'm keeping a record of my journey and solutions on GitHub:
+45 Days DSA Challenge ->(https://github.com/MITTALBHAVYA/45DaysDSAChallenge)
+
+#Python #WebDevelopment #DSA #LeetCode #ProblemSolving #CodingChallenge #InternshipPreparation #PlacementPreparation #MERNStack #AI #OCR
