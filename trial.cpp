@@ -1,27 +1,33 @@
 class Solution {
 public:
-    long long call=0;
-    bool solve(vector<bool>&path,long long lastjump,long long index){
-        cout<<++call<<endl;
-        if(index==path.size()-1){
-            return true;
+    int dfs(int node,vector<vector<int>>&adjGraph,vector<int>&no_of_nodes_in_subtree,vector<int>&visited,int sumwithzero,int level){
+        visited[node]=1;
+        sumwithzero += level;
+        int no_of_child=0;
+        for(auto neigh : adjGraph[node]){
+            if(!visited[neigh]){
+                no_of_child += dfs(neigh,adjGraph,no_of_nodes_in_subtree,visited,sumwithzero,level+1);
+            }
         }
-        if(index>=path.size() || index<0 ||path[index]!=true || lastjump<=0){
-            return false;
-        }
-        bool a=false,b=false,c=false;
-        a = solve(path,lastjump-1,index+(lastjump-1));
-        b = solve(path,lastjump,index+lastjump);
-        c = solve(path,lastjump+1,index+(lastjump+1));
-        return a||b||c;
+        return no_of_nodes_in_subtree[node] = no_of_child + 1;
     }
-    bool canCross(vector<int>& stones) {
-        long long n = stones.size();
-        long long last = stones[n-1];
-        vector<bool>path(last+1,false);
-        for(auto stone : stones){
-            path[stone]=true;
+    vector<int> sumOfDistancesInTree(int n, vector<vector<int>>& edges) {
+        vector<vector<int>>adjGraph(n);
+        for(int i=0;i<n-1;i++){
+            adjGraph[edges[i][0]].push_back(edges[i][1]);
+            adjGraph[edges[i][1]].push_back(edges[i][0]);
         }
-        return solve(path,1,1);
+        int level=0;
+        int sumwithzero=0;
+        vector<int>no_of_nodes_in_subtree(n,0);
+        vector<int>visited(n,0);
+        vector<int>ans;
+        int temp = dfs(0,adjGraph,no_of_nodes_in_subtree,visited,sumwithzero,level);
+        cout<<"Children"<<endl;
+        for(auto it : no_of_nodes_in_subtree){
+            cout<<it<<" ";
+        }
+        cout<<endl;
+        return ans;
     }
 };
